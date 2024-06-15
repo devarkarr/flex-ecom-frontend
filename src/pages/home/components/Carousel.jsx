@@ -19,17 +19,17 @@ const Carousel = () => {
             >
                 <SwiperSlide>
                     <div className='w-full'>
-                        <img src="/src/assets/images/carousel/slider_one-cover.png" className='w-full' alt="" />
+                        <img src="/images/carousel/slider_one-cover.png" className='w-full' alt="" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='w-full'>
-                        <img src="/src/assets/images/carousel/slider_two-cover.png" className='w-full' alt="" />
+                        <img src="/images/carousel/slider_two-cover.png" className='w-full' alt="" />
                     </div>
                 </SwiperSlide>
                 <SwiperSlide>
                     <div className='w-full'>
-                        <img src="/src/assets/images/carousel/slider_three-cover.png" className='w-full' alt="" />
+                        <img src="/images/carousel/slider_three-cover.png" className='w-full' alt="" />
                     </div>
                 </SwiperSlide>
             </Swiper>
