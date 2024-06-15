@@ -1,5 +1,6 @@
-import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
+import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
 import { GiShoppingBag } from "react-icons/gi"
+import { CiCircleMinus,CiCirclePlus } from "react-icons/ci";
 
 const FeatureCard = () => {
   return (
@@ -29,6 +30,18 @@ const FeatureCard = () => {
                   </p>
                   <h1 className="text-base text-gray-600 md:text-xl font-semibold">$4.50</h1>
                 </div>
+              </div>
+              <div className="flex gap-3">
+                <h1>Quantity:</h1>
+                <div className="flex items-center gap-2">
+                  <CiCircleMinus size={25} className="text-body"/>
+                  <h1 className="text-semibold text-gray-600 md:text-lg">1</h1>
+                  <CiCirclePlus size={25} className="text-body"/>
+                </div>
+              </div>
+
+              <div className="text-center">
+                <button className="button bg-body text-white w-full py-1.5 flex justify-center">Add to Cart</button>
               </div>
 
             </DialogContent>
