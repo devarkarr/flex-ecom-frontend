@@ -1,5 +1,6 @@
 import App from "@/App";
 import Home from "@/pages/home/Home";
+import Menu from "@/pages/menu/Menu";
 import {
   Route,
   createBrowserRouter,
@@ -11,6 +12,7 @@ const router = createBrowserRouter(
     <Route>
       <Route path="/" element={<App />}>
         <Route index element={<Home/>}/>
+        <Route path="/menu" element={<Menu/>}/>
       </Route>
     </Route>
   )

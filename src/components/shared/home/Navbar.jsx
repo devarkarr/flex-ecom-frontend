@@ -2,9 +2,10 @@ import menu from "@/constants/menu"
 import { FaUserCircle } from "react-icons/fa";
 import { GiShoppingBag } from "react-icons/gi";
 import { IoSearch } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 
-const menuList = menu.map((item, i) => (<li key={i} className="font-semibold text-base lg:text-lg">{item.name}</li>))
+const menuList = menu.map((item, i) => (<li key={i} className="font-semibold text-base lg:text-lg"><Link to={item.path}>{item.name}</Link></li>))
 const Navbar = () => {
   return (
     <nav className="px-3 lg:px-20 lg:h-[4.4rem] shadow-xl lg:container lg:mx-auto shadow-gray-100 flex lg:flex-row flex-col lg:items-center justify-between ">

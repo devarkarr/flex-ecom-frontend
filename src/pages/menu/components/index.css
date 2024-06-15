@@ -1,0 +1,47 @@
+.swiper {
+  width: 100%;
+  position: unset;
+  border-radius: 1rem;
+  --swiper-navigation-size: 20px;
+  --swiper-navigation-top-offset: 50%;
+  --swiper-navigation-sides-offset: 10px;
+  --swiper-navigation-color: var(--swiper-theme-color);
+}
+
+.swiper-button-prev {
+  left: 1rem;
+  color: #ff8f00;
+}
+
+.swiper-button-next {
+  right: 1rem;
+  color: #ff8f00;
+}
+
+@media screen and (max-width: 480px) {
+  .swiper-wrapper {
+    gap: 3.5rem;
+  }
+}
+
+@media screen and (min-width: 481px) and (max-width: 575px) {
+  .swiper-wrapper {
+    gap: 2.5rem;
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .swiper-wrapper {
+    gap: 1.7rem;
+  }
+}
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .swiper-wrapper {
+    gap: 4rem;
+  }
+}
+@media screen and (min-width: 1075px) and (max-width: 1115px) {
+  .swiper-wrapper {
+    gap: 2.7rem;
+  }
+}
