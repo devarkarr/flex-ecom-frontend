@@ -78,9 +78,12 @@
     @apply py-1 px-2.5 bg-body flex  items-center gap-1.5 text-white rounded-3xl;
   }
   .button {
-    @apply py-1 px-2.5 bg-body/20 flex font-semibold  items-center gap-1.5 text-body rounded-3xl;
+    @apply py-1 px-2.5 bg-white  hover:bg-body/20 shadow-lg duration-300 flex font-semibold  items-center gap-1.5 text-body rounded-3xl;
   }
 }
 .mobile-cart-navbar {
   box-shadow: -1px -8px 25px rgba(185, 185, 185, 0.623);
+}
+.active {
+  color: #ff8f00;
 }

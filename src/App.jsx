@@ -6,13 +6,14 @@ import MobileNavbar from "./components/shared/home/MobileNavbar"
 const App = () => {
   return (
     <div className="relative">
-      <Navbar/>
+      <Navbar />
       <div className="px-3 md:px-24 lg:px-32">
-      <Outlet/>
+        <Outlet />
       </div>
-      <Footer/>
+      <Footer />
       {/* moblie */}
-      <MobileNavbar/>
+      <MobileNavbar />
+      
     </div>
   )
 }

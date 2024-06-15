@@ -1,4 +1,5 @@
 import App from "@/App";
+import Login from "@/pages/auth/Login";
 import Home from "@/pages/home/Home";
 import Menu from "@/pages/menu/Menu";
 import {
@@ -13,6 +14,7 @@ const router = createBrowserRouter(
       <Route path="/" element={<App />}>
         <Route index element={<Home/>}/>
         <Route path="/menu" element={<Menu/>}/>
+        <Route path="/login" element={<Login/>}/>
       </Route>
     </Route>
   )
