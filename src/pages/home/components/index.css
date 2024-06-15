@@ -1,0 +1,20 @@
+.swiper {
+  width: 100%;
+  position: unset;
+  /* height: 25rem; */
+  border-radius: 1rem;
+  --swiper-navigation-size: 20px;
+  --swiper-navigation-top-offset: 50%;
+  --swiper-navigation-sides-offset: 10px;
+  --swiper-navigation-color: var(--swiper-theme-color);
+}
+
+.swiper-button-prev {
+  left: 1.5rem;
+  color: #ff8f00;
+}
+
+.swiper-button-next {
+  right: 1.5rem;
+  color: #ff8f00;
+}
