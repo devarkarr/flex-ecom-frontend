@@ -22,7 +22,7 @@ const FeatureCard = () => {
             <DialogContent>
               <div className="flex gap-3">
                 <div>
-                  <img src="/public/images/menu/szechuan_beef-cover.png" className="w-20 h-20 rounded-lg" alt="" />
+                  <img src="/images/menu/szechuan_beef-cover.png" className="w-20 h-20 rounded-lg" alt="" />
                 </div>
                 <div className="space-y-1.5">
                   <h5 className=" text-sm font-bold text-gray-700">BBQ Pulled Pork</h5>

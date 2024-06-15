@@ -3,10 +3,11 @@ import { FaUserCircle } from "react-icons/fa";
 import { GiShoppingBag } from "react-icons/gi";
 import { IoSearch } from "react-icons/io5";
 import { Link, NavLink } from "react-router-dom";
-import { Drawer, DrawerClose, DrawerContent, DrawerFooter, DrawerHeader, DrawerTrigger } from "@/components/ui/drawer"
-import { ScrollArea } from "@/components/ui/scroll-area"
-import { MdCancel } from "react-icons/md";
-
+import {
+  Sheet,
+  SheetContent,
+  SheetTrigger,
+} from "@/components/ui/sheet"
 
 const menuList = menu.map((item, i) => (<li key={i} className="font-semibold text-base lg:text-lg"><NavLink to={item.path} className="text-gray-500">{item.name}</NavLink></li>))
 const Navbar = () => {
@@ -108,32 +109,25 @@ const Navbar = () => {
         <li>
 
           {/* cart drawer */}
-          <Drawer direction="right">
-            <DrawerTrigger >
+          <Sheet>
+            <SheetTrigger>
               <button className="nav-button bg-gray-800 ">
                 <GiShoppingBag size={18} />
                 <span className=" font-medium">$0.00</span>
-              </button></DrawerTrigger>
-            <DrawerContent className=" ms-auto md:w-[32%] lg:w-[28%]">
-              <ScrollArea className='h-screen'>
-                <DrawerHeader className="w-full flex justify-end">
-                  <DrawerClose>
-                    <MdCancel size={28} className="text-red-500" />
-                  </DrawerClose>
-                </DrawerHeader>
-                <div className="my-6">
-                  <h1 className=" font-medium text-lg md:text-[1.4rem] text-center">My Cart</h1>
-                  <div className="flex flex-col items-center justify-center my-10 md:my-16">
-                    <img src="/images/cart/empty-cart .gif" className=" w-40" alt="" />
-                    <p className="text-sm text-gray-400 mt-7 px-12 text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                    </p>
-                  </div>
+              </button>
+            </SheetTrigger>
+            <SheetContent>
+              <div className="my-6">
+                <h1 className=" font-medium text-lg md:text-[1.4rem] text-center">My Cart</h1>
+                <div className="flex flex-col items-center justify-center my-10 md:my-16">
+                  <img src="/images/cart/empty-cart .gif" className=" w-40" alt="" />
+                  <p className="text-sm text-gray-400 mt-7 px-12 text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                  </p>
                 </div>
-                <DrawerFooter>
-                </DrawerFooter>
-              </ScrollArea>
-            </DrawerContent>
-          </Drawer>
+              </div>
+            </SheetContent>
+          </Sheet>
+
         </li>
         <li>
           <Link to="/login" className="nav-button">

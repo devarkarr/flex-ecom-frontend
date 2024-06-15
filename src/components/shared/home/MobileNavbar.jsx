@@ -4,6 +4,8 @@ import { FaClipboardList } from "react-icons/fa";
 import { FaUserCircle } from "react-icons/fa";
 import { GiShoppingBag } from "react-icons/gi";
 import { NavLink } from "react-router-dom";
+import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+
 
 const MobileNavbar = () => {
     return (
@@ -20,8 +22,27 @@ const MobileNavbar = () => {
                     <span className="text-xs ">Menu</span>
                 </NavLink>
             </li>
-            <li className="flex -translate-y-7  flex-col shadow shadow-body bg-body w-10 h-10 rounded-full justify-center items-center text-white">
-                <GiShoppingBag size={20} />
+            <li className=" -translate-y-7      text-white">
+                {/* cart drawer */}
+
+                <Sheet>
+                    <SheetTrigger>
+                        <div className="shadow-body flex flex-col shadow bg-body w-12 h-12 justify-center items-center rounded-full">
+                            <GiShoppingBag size={20} />
+                        </div>
+                    </SheetTrigger>
+                    <SheetContent>
+                        <div className="my-6">
+                            <h1 className=" font-medium text-lg md:text-[1.4rem] text-center">My Cart</h1>
+                            <div className="flex flex-col items-center justify-center my-10 md:my-16">
+                                <img src="/images/cart/empty-cart .gif" className=" w-40" alt="" />
+                                <p className="text-sm text-gray-400 mt-7 px-12 text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                                </p>
+                            </div>
+                        </div>
+                    </SheetContent>
+                </Sheet>
+
             </li>
             <li className="flex flex-col justify-center items-center text-gray-500">
                 <FaClipboardList size={20} />
