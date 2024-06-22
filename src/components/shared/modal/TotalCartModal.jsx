@@ -5,7 +5,7 @@ import { FaPlus } from "react-icons/fa6";
 import { Link } from "react-router-dom";
 
 const Cart = ({ cart }) => {
-    const { product,qty } = cart
+    const { product, qty } = cart
     return (
         <li>
             <div className="flex justify-between gap-3 items-center w-full">
@@ -35,8 +35,8 @@ const Cart = ({ cart }) => {
 const TotalCartModal = () => {
     const carts = useSelector(state => state.carts)
     return (
-        <div className=" relative h-screen">
-            <div className="my-6 h-full">
+        <div className=" relative h-full">
+            <div className="mt-6 h-full">
                 <h1 className=" font-bold text-lg md:text-[1.4rem] text-center">My Cart</h1>
                 {
                     carts.cartItems.length ?
@@ -54,15 +54,19 @@ const TotalCartModal = () => {
                         </div>
                 }
             </div>
-            <div className=" absolute w-full bottom-0 bg-white py-3 pb-16 lg:pb-14">
-                <div className="flex justify-between py-1.5 lg:py-2 px-3 border rounded-xl">
-                    <h1 className="font-bold">Subtotal</h1>
-                    <h1 className="text-body font-bold">{currencyFormat(carts.totalPrice)}</h1>
-                </div>
-                <div className="w-full mt-3 flex">
-                <Link to='/checkout' className="bg-body text-center text-white py-1.5 lg:py-2 font-bold px-4 w-full  rounded-full">Procced To Checkout</Link>
-                </div>
-            </div>
+            {
+                carts.cartItems.length && (
+                    <div className=" absolute w-full bottom-0 bg-white py-3 mb-3">
+                        <div className="flex justify-between py-1.5 lg:py-2 px-3 border rounded-xl">
+                            <h1 className="font-bold">Subtotal</h1>
+                            <h1 className="text-body font-bold">{currencyFormat(carts.totalPrice)}</h1>
+                        </div>
+                        <div className="w-full mt-3 flex">
+                            <Link to='/checkout' className="bg-body text-center text-white py-1.5 lg:py-2 font-bold px-4 w-full  rounded-full">Procced To Checkout</Link>
+                        </div>
+                    </div>
+                )
+            }
         </div>
     )
 }
