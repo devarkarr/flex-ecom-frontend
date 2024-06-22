@@ -8,9 +8,13 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet"
+import { useSelector } from "react-redux";
+import { currencyFormat } from "@/lib/utils";
+import TotalCartModal from "../modal/TotalCartModal";
 
 const menuList = menu.map((item, i) => (<li key={i} className="font-semibold text-base lg:text-lg"><NavLink to={item.path} className="text-gray-500">{item.name}</NavLink></li>))
 const Navbar = () => {
+  const {totalPrice} = useSelector(state=>state.carts)
   return (
     <nav className="px-3 z-50  sticky top-0 bg-white lg:px-20 lg:h-[4.4rem] shadow lg:container lg:mx-auto shadow-gray-300 flex lg:flex-row flex-col lg:items-center justify-between ">
       <Link to="/">
@@ -113,18 +117,11 @@ const Navbar = () => {
             <SheetTrigger>
               <button className="nav-button bg-gray-800 ">
                 <GiShoppingBag size={18} />
-                <span className=" font-medium">$0.00</span>
+                <span className=" font-medium">{currencyFormat(totalPrice)}</span>
               </button>
             </SheetTrigger>
             <SheetContent>
-              <div className="my-6">
-                <h1 className=" font-medium text-lg md:text-[1.4rem] text-center">My Cart</h1>
-                <div className="flex flex-col items-center justify-center my-10 md:my-16">
-                  <img src="/images/cart/empty-cart .gif" className=" w-40" alt="" />
-                  <p className="text-sm text-gray-400 mt-7 px-12 text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  </p>
-                </div>
-              </div>
+              <TotalCartModal/>
             </SheetContent>
           </Sheet>
 

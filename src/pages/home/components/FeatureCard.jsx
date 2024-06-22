@@ -1,6 +1,6 @@
 import { Dialog, DialogContent, DialogTrigger } from "@/components/ui/dialog"
 import { GiShoppingBag } from "react-icons/gi"
-import { CiCircleMinus,CiCirclePlus } from "react-icons/ci";
+import CartModal from "@/components/shared/modal/CartModal";
 
 const FeatureCard = () => {
   return (
@@ -20,33 +20,9 @@ const FeatureCard = () => {
               </button>
             </DialogTrigger>
             <DialogContent>
-              <div className="flex gap-3">
-                <div>
-                  <img src="/images/menu/szechuan_beef-cover.png" className="w-20 h-20 rounded-lg" alt="" />
-                </div>
-                <div className="space-y-1.5">
-                  <h5 className=" text-sm font-bold text-gray-700">BBQ Pulled Pork</h5>
-                  <p className="text-xs text-gray-500 tracking-tight ">Sweet and tangy BBQ Pork sandwiches made with juicy...
-                  </p>
-                  <h1 className="text-base text-gray-600 md:text-xl font-semibold">$4.50</h1>
-                </div>
-              </div>
-              <div className="flex gap-3">
-                <h1>Quantity:</h1>
-                <div className="flex items-center gap-2">
-                  <CiCircleMinus size={25} className="text-body"/>
-                  <h1 className="text-semibold text-gray-600 md:text-lg">1</h1>
-                  <CiCirclePlus size={25} className="text-body"/>
-                </div>
-              </div>
-
-              <div className="text-center">
-                <button className="button bg-body text-white w-full py-1.5 flex justify-center">Add to Cart</button>
-              </div>
-
+              <CartModal/>
             </DialogContent>
           </Dialog>
-
         </div>
       </div>
     </div>

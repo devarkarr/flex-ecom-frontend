@@ -2,6 +2,7 @@ import App from "@/App";
 import Dashboard from "@/pages/admin/dashboard/Dashboard";
 import AuthLayout from "@/pages/admin/layout/AuthLayout";
 import Login from "@/pages/auth/Login";
+import Checkout from "@/pages/checkout/Checkout";
 import Home from "@/pages/home/Home";
 import Menu from "@/pages/menu/Menu";
 import {
@@ -16,6 +17,7 @@ const router = createBrowserRouter(
       <Route path="/" element={<App />}>
         <Route index element={<Home/>}/>
         <Route path="/menu" element={<Menu/>}/>
+        <Route path="/checkout" element={<Checkout/>}/>
         <Route path="/login" element={<Login/>}/>
       </Route>
       <Route path="/dashboard" element={<AuthLayout/>}>

@@ -5,6 +5,7 @@ import { FaUserCircle } from "react-icons/fa";
 import { GiShoppingBag } from "react-icons/gi";
 import { NavLink } from "react-router-dom";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import TotalCartModal from "../modal/TotalCartModal";
 
 
 const MobileNavbar = () => {
@@ -32,14 +33,7 @@ const MobileNavbar = () => {
                         </div>
                     </SheetTrigger>
                     <SheetContent>
-                        <div className="my-6">
-                            <h1 className=" font-medium text-lg md:text-[1.4rem] text-center">My Cart</h1>
-                            <div className="flex flex-col items-center justify-center my-10 md:my-16">
-                                <img src="/images/cart/empty-cart .gif" className=" w-40" alt="" />
-                                <p className="text-sm text-gray-400 mt-7 px-12 text-center">Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                                </p>
-                            </div>
-                        </div>
+                        <TotalCartModal/>
                     </SheetContent>
                 </Sheet>
 
